@@ -52,3 +52,17 @@ label {
     width: 1200px;
     margin: auto;
 }
+/* media queries */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    #input-area {
+        width: 700px;
+        position: relative;
+    }
+    .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
+        position: relative;
+        margin-right: 30px;
+        margin-left: 20px;
+        width: 2px;
+    }
+}
+ 
