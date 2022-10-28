@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Genesis</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign up </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Log In </a>
+              </li>
+           
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Title-->
+      <div class="title-pic">
+        <h1>TO-DO-LIST</h1>
+      </div>
+      <!--input section-->
+      <div class="row g-1 position-relative mx-auto " id="input-area">
+        <div class="col-2 ">
+          <input type="text" class="form-control mx-auto text-success" placeholder="Name" aria-label="name">
+        </div>
+        <div class="col-2 ">
+          <input type="text" class="form-control " placeholder="Due Date" onfocus="(this.type='date')" onblur="(this.type='text')">
+        </div>
+        <div class="col-3 ">
+            <div class="dropdown ">
+                <button class="btn btn-outline-success btn-md dropdown-toggle  " style="--bs-btn-padding-y: 7px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 19px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Status    
+                </button>
+                <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item" href="#">Todo</a></li>
+                  <li><a class="dropdown-item" href="#">In Progress</a></li>
+                  <li><a class="dropdown-item" href="#">Review</a></li>
+                  <li><a class="dropdown-item" href="#">Done</a></li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-3 ">
+            <div class="dropdown mx-auto">
+                <button class="btn btn-outline-success btn-md dropdown-toggle" " style="--bs-btn-padding-y: 7px; --bs-btn-padding-x: 60px; --bs-btn-font-size: 19px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Assigned To   
+                </button>
+                <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item" href="#">Alice</a></li>
+                  <li><a class="dropdown-item" href="#">Jim</a></li>
+                  <li><a class="dropdown-item" href="#">Vijaya</a></li> 
+                </ul>
+              </div>          
+            </div>   
+         <div class="form-floating ">
+                <textarea class="form-control position-relative mx-auto mt-3 mb-3 " placeholder="Description" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea ">Description</label>
+              </div>
+          <input class="btn btn-warning w-50 mx-auto rounded-pill" type="submit" value="Add Task">
+      </div>
+      <!--Task area-->
+      
+      
+      <!--Task record-->
+      <div class="container text-center ">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mt-4 mx-auto gap-5 ">
+          <div class="col  mt-3 mb-2 rounded-pill "style="width: 250px; height: 600px; margin-right:30px; background-color: rgba(0,0,255,.1)">
+            <div class="container-text-center mt-5 w-75 pt-3 pb-3 fs-4 text text-bg-danger rounded-pill">
+              ToDo 
+          </div>
+            <p class="text-center mt-5 border border-danger rounded-pill"> Name:A <br>
+                Description: buy cake<br>
+                Assigned To: Alice<br>
+                Due Date: 10/28/2022
+               <button type="button" class="btn btn-light rounded-pill">Delete</button>
+               <button type="button" class="btn btn-light rounded-pill">Edit</button> 
+               
+            </p>
+            
+        </div>
+          <div class="col  mt-3 mb-2 rounded-pill "style="width: 250px; height: 600px; margin-left:40px; background-color: rgba(0,0,255,.1)">
+            <div class="container-text-center mt-5 w-75 pt-3 pb-3 fs-4 text text-bg-warning rounded-pill">
+              In Progress 
+          </div>
+            <p class="text-center mt-5 border border-warning rounded-pill"> Name:A <br>
+                Description: buy cake<br>
+                Assigned To: Alice<br>
+                Due Date: 10/28/2022
+                <button type="button" class="btn btn-light rounded-pill">Delete</button>
+               <button type="button" class="btn btn-light rounded-pill">Edit</button> 
+            </p>
+        </div>
+          <div class="col  mt-3 mb-2 rounded-pill "style="width: 250px; height: 600px; margin-left:40px; background-color: rgba(0,0,255,.1)" >
+            
+            <div class="container-text-center mt-5 w-75 pt-3 pb-3 fs-4 text text-bg-info rounded-pill">
+              Review 
+          </div>
+          <p class="text-center mt-5 border border-info rounded-pill"> Name:A <br>
+                Description: buy cake<br>
+                Assigned To: Alice<br>
+                Due Date: 10/28/2022
+                <button type="button" class="btn btn-light rounded-pill">Delete</button>
+               <button type="button" class="btn btn-light rounded-pill">Edit</button> 
+            </p>
+        </div>
+          <div class="col  mt-3 mb-2 rounded-pill "style="width: 250px; height: 600px; margin-left:40px; background-color: rgba(0,0,255,.1)">
+            <div class="container-text-center mt-5 w-75 pt-3 pb-3 fs-4 text text-bg-success rounded-pill">
+              Done 
+          </div>
+            <p class="text-center mt-5 border border-success rounded-pill"> Name:A <br>
+                Description: buy cake<br>
+                Assigned To: Alice<br>
+                Due Date: 10/28/2022
+                <button type="button" class="btn btn-light rounded-pill">Delete</button>
+               <button type="button" class="btn btn-light rounded-pill">Edit</button> 
+            </p>
+        </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+</html>
