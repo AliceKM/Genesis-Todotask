@@ -1,114 +1,116 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 #navbarNav {
-    margin-left: 70%;
-    color: yellow;
+  margin-left: 70%;
 }
 
 .title-pic {
-    background-color: aquamarine;
-    height: 250px; 
+  background-color: aquamarine;
+  height: 250px;
 }
 
-.title-pic h1{
-    text-align: center;
-    padding-top: 90px;
+.title-pic h1 {
+  text-align: center;
+  padding-top: 90px;
+}
+.status-title {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid gray;
+  padding: 10px;
+  margin-top: 10px;
+}
+.tcard {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  border: 1px solid gray;
 }
 
-.status-title
-{
-    width: 100%;
-    border-radius: 5px;
-    border: 2px solid gray;
-    padding: 10px;
-    margin-top: 10px;
-}
-.tcard
-{
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgba(0,0,255,.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    border: 1px solid gray;
-    
-   
-}
-.task-box
-{
-    border: 1px solid rgb(206, 45, 45);
-    border-radius: 10px;
-    margin: 10px 2px 10px 2px;
-    padding: 10px;
-
+.task-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  border: 1px solid rgb(206, 45, 45);
+  border-radius: 10px;
+  margin: 10px 2px 10px 2px;
+  padding: 10px;
 }
 
-.card-container
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.button-panel {
+  flex-direction: row;
+  width: 100%;
 }
 
 .button-panel button {
-    border: 1px solid rgb(206, 45, 45);
-    border-radius: 10px;
-    margin: 10px 2px 10px 2px;
-    padding: 10px;
-    width: 40%;
+  border: 1px solid rgb(206, 45, 45);
+  border-radius: 10px;
+  margin: 10px 2px 10px 2px;
+  padding: 10px;
+  width: 40%;
 }
-.delete
-{
- background-color: red;
- color: white;
+.delete {
+  background-color: red;
+  color: white;
 }
-.edit
-{
- background-color: rgb(49, 138, 176);
- color: white;
+.edit {
+  background-color: rgb(49, 138, 176);
+  color: white;
 }
 
 #input-area {
-    position: relative;
-    text-align: center;
-    margin: auto;
-    width: 1200px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    
+  position: relative;
+  text-align: center;
+  margin: auto;
+  width: 1200px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
-input.form-control{
-    border-color: #198754;
-    margin-left: 30px;
-    height: 44.5px;
+input.form-control {
+  border-color: #198754;
+  margin-left: 30px;
+  height: 44.5px;
 }
-.dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
-    position: relative;
-    margin-left: 40px;
+.dropdown,
+.dropdown-center,
+.dropend,
+.dropstart,
+.dropup,
+.dropup-center {
+  position: relative;
+  margin-left: 40px;
 }
 
 textarea.form-control {
-    width: 700px;
-    margin-left: 10%;
-    border: #198754 solid 2px;
+  width: 700px;
+  margin-left: 10%;
+  border: #198754 solid 2px;
 }
 label {
-    text-align: center;
-    margin-left: 10%;
-    color: #198754;
-    font-size: 18px;
+  text-align: center;
+  margin-left: 10%;
+  color: #198754;
+  font-size: 18px;
 }
 .container-text-center {
-    border: 2px #198754 solid;
-    text-align: center;
-    width: 1200px;
-    margin: auto;
+  border: 2px #198754 solid;
+  text-align: center;
+  width: 1200px;
+  margin: auto;
 }

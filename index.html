@@ -1,213 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO-DO-LIST</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO-DO-LIST</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <!--Nav-->
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Genesis</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sign up </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Log In </a>
-              </li>
-           
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!--Title-->
-      <div class="title-pic">
-        <h1>TO-DO-LIST</h1>
+  <!--Nav-->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Genesis</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign up </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log In </a>
+          </li>
+
+        </ul>
       </div>
-      <!--input section-->
-      <div class="row g-1 position-relative mx-auto " id="input-area">
-        <div class="col-2 ">
-          <input type="text" class="form-control mx-auto text-success" placeholder="Task Name" aria-label="name">
-        </div>
-        <div class="col-2 ">
-          <input type="text" class="form-control " placeholder="Due Date" onfocus="(this.type='date')" onblur="(this.type='text')">
-        </div>
-        <div class="col-3 ">
-            <div class="dropdown ">
-                <button class="btn btn-outline-success btn-md dropdown-toggle  " style="--bs-btn-padding-y: 7px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 19px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Status    
-                </button>
-                <ul class="dropdown-menu ">
-                  <li><a class="dropdown-item" href="#">To Do</a></li>
-                  <li><a class="dropdown-item" href="#">In Progress</a></li>
-                  <li><a class="dropdown-item" href="#">Review</a></li>
-                  <li><a class="dropdown-item" href="#">Done</a></li>
-                </ul>
-              </div>
-          </div>
-          <div class="col-3 ">
-            <div class="dropdown mx-auto">
-                <button class="btn btn-outline-success btn-md dropdown-toggle" " style="--bs-btn-padding-y: 7px; --bs-btn-padding-x: 60px; --bs-btn-font-size: 19px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 Assigned To   
-                </button>
-                <ul class="dropdown-menu ">
-                  <li><a class="dropdown-item" href="#">Alice</a></li>
-                  <li><a class="dropdown-item" href="#">Jim</a></li>
-                  <li><a class="dropdown-item" href="#">Vijaya</a></li> 
-                  <li><a class="dropdown-item" href="#">Liz</a></li> 
-                </ul>
-              </div>          
-            </div>   
-         <div class="form-floating ">
-                <textarea class="form-control position-relative mx-auto mt-3 mb-3 " placeholder="Description" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea ">Description</label>
-              </div>
-          <input class="btn btn-warning w-50 mx-auto rounded-pill" type="submit" value="Add Task">
+    </div>
+  </nav>
+  <!--Title-->
+  <div class="title-pic">
+    <h1>TO-DO-LIST</h1>
+  </div>
+  <!--input section-->
+  <div class="row g-1 position-relative mx-auto " id="input-area">
+    <div class="col-2 ">
+      <input type="text" class="form-control mx-auto text-success" placeholder="Task Name" aria-label="name">
+    </div>
+    <div class="col-2 ">
+      <input type="text" class="form-control " placeholder="Due Date" onfocus="(this.type='date')"
+        onblur="(this.type='text')">
+    </div>
+    <div class="col-3 ">
+      <div class="dropdown ">
+        <button class="btn btn-outline-success btn-md dropdown-toggle  "
+          style="--bs-btn-padding-y: 7px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 19px;" type="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Status
+        </button>
+        <ul class="dropdown-menu ">
+          <li><a class="dropdown-item" href="#">To Do</a></li>
+          <li><a class="dropdown-item" href="#">In Progress</a></li>
+          <li><a class="dropdown-item" href="#">Review</a></li>
+          <li><a class="dropdown-item" href="#">Done</a></li>
+        </ul>
       </div>
+    </div>
+    <div class="col-3 ">
+      <div class="dropdown mx-auto">
+        <button class="btn btn-outline-success btn-md dropdown-toggle" " style=" --bs-btn-padding-y: 7px;
+          --bs-btn-padding-x: 60px; --bs-btn-font-size: 19px;" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Assigned To
+        </button>
+        <ul class="dropdown-menu ">
+          <li><a class="dropdown-item" href="#">Alice</a></li>
+          <li><a class="dropdown-item" href="#">Jim</a></li>
+          <li><a class="dropdown-item" href="#">Vijaya</a></li>
+          <li><a class="dropdown-item" href="#">Liz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="form-floating ">
+      <textarea class="form-control position-relative mx-auto mt-3 mb-3 " placeholder="Description"
+        id="floatingTextarea"></textarea>
+      <label for="floatingTextarea ">Description</label>
+    </div>
+    <input class="btn btn-warning w-50 mx-auto rounded-pill" type="submit" value="Add Task">
+  </div>
 
 
 
 
-      <!--Task area-->
-      
-      
-      <!--Task record-->
-      <div class="card-container">
-      
-          
-          <div class="tcard">
-
-            <div class="status-title text-bg-danger">
-              To Do 
-            </div>
-
-            <div class="task-box">
-              <p class="taskname"><strong>Task: </strong>Go Shopping</p>
-              <p class="description"><strong>Description: </strong>Make a list, catch a bus, avoid old ladies, wear a mask and take money.</p>
-              <p class="assigned-to"><strong>Assigned To: </strong>Alice</p>
-              <p class="due-date"><strong>Due Date: </strong>10/30/2022</p>
-            
-              <div class="button-panel">
-                <button type="button" class="delete">Delete</button>
-                <button type="button" class="edit">Edit</button> 
-              </div>
-              
-            </div>
-        </div>
+  <!--Task area-->
 
 
-        <div class="tcard">
+  <!--Task record-->
+  <div class="card-container">
 
-          <div class="status-title text-bg-secondary">
-            In Progress 
-          </div>
 
-          <div class="task-box">
-            <p class="taskname"><strong>Task: </strong>Paint House</p>
-            <p class="description"><strong>Description: </strong>Choose Color, Buy Paint and Brushes. Borrow ladder. Paint all day.</p>
-            <p class="assigned-to"><strong>Assigned To: </strong>Jim</p>
-            <p class="due-date"><strong>Due Date: </strong>10/30/2022</p>
-          
-            <div class="button-panel">
-              <button type="button" class="delete">Delete</button>
-              <button type="button" class="edit">Edit</button> 
-            </div>
-            
-          </div>
+    <div class="tcard">
+
+      <div class="status-title text-bg-danger">
+        To Do
       </div>
 
+      <div class="task-box">
+        <p class="taskname"><strong>Task: </strong>Go Shopping</p>
+        <p class="description"><strong>Description: </strong>Make a list, catch a bus, avoid old ladies, wear a mask and
+          take money.</p>
+        <p class="assigned-to"><strong>Assigned To: </strong>Alice</p>
+        <p class="due-date"><strong>Due Date: </strong>10/30/2022</p>
 
-
-      <div class="tcard">
-
-        <div class="status-title text-bg-danger">
-          To Do 
+        <div class="button-panel">
+          <button type="button" class="delete">Delete</button>
+          <button type="button" class="edit">Edit</button>
         </div>
 
-        <div class="task-box">
-          <p class="taskname"><strong>Task: </strong>Polish Shoes</p>
-          <p class="description"><strong>Description: </strong>Apply polish and rub til shiny</p>
-          <p class="assigned-to"><strong>Assigned To: </strong>Alice</p>
+      </div>
+    </div>
+
+
+    <div class="tcard">
+
+      <div class="status-title text-bg-secondary">
+        In Progress
+      </div>
+
+      <div class="task-box">
+        <div>
+
+
+          <p class="taskname"><strong>Task: </strong>Paint House</p>
+          <p class="description"><strong>Description: </strong>Choose Color, Buy Paint and Brushes. Borrow ladder. Paint
+            all day.</p>
+          <p class="assigned-to"><strong>Assigned To: </strong>Jim</p>
           <p class="due-date"><strong>Due Date: </strong>10/30/2022</p>
-        
-          <div class="button-panel">
-            <button type="button" class="delete">Delete</button>
-            <button type="button" class="edit">Edit</button> 
-          </div>
-          
         </div>
+        <div class="button-panel">
+          <button type="button" class="delete">Delete</button>
+          <button type="button" class="edit">Edit</button>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="tcard">
+
+      <div class="status-title text-bg-danger">
+        To Do
+      </div>
+
+      <div class="task-box">
+        <p class="taskname"><strong>Task: </strong>Polish Shoes</p>
+        <p class="description"><strong>Description: </strong>Apply polish and rub til shiny</p>
+        <p class="assigned-to"><strong>Assigned To: </strong>Alice</p>
+        <p class="due-date"><strong>Due Date: </strong>10/30/2022</p>
+
+        <div class="button-panel">
+          <button type="button" class="delete">Delete</button>
+          <button type="button" class="edit">Edit</button>
+        </div>
+
+      </div>
     </div>
 
     <div class="tcard">
 
       <div class="status-title text-bg-primary">
-        Review  
+        Review
       </div>
 
       <div class="task-box">
         <p class="taskname"><strong>Task: </strong>Feed Baby</p>
-        <p class="description"><strong>Description: </strong>Cook food, get spoon. Feed til full. Clean  up mess.</p>
+        <p class="description"><strong>Description: </strong>Cook food, get spoon. Feed til full. Clean up mess.</p>
         <p class="assigned-to"><strong>Assigned To: </strong>Vanitha</p>
         <p class="due-date"><strong>Due Date: </strong>10/30/2022</p>
-      
+
         <div class="button-panel">
           <button type="button" class="delete">Delete</button>
-          <button type="button" class="edit">Edit</button> 
+          <button type="button" class="edit">Edit</button>
         </div>
-        
+
       </div>
+    </div>
+
+    <div class="tcard">
+
+      <div class="status-title text-bg-success">
+        Done
+      </div>
+
+      <div class="task-box">
+        <p class="taskname"><strong>Task: </strong>Have a Shower</p>
+        <p class="description"><strong>Description: </strong>Turn on water. Undress. Rub self with soap.</p>
+        <p class="assigned-to"><strong>Assigned To: </strong>Jim</p>
+        <p class="due-date"><strong>Due Date: </strong>10/30/2022</p>
+
+        <div class="button-panel">
+          <button type="button" class="delete">Delete</button>
+          <button type="button" class="edit">Edit</button>
+        </div>
+
+      </div>
+
+
+
+
+
+
+    </div>
   </div>
 
-  <div class="tcard">
-
-    <div class="status-title text-bg-success">
-      Done
-    </div>
-
-    <div class="task-box">
-      <p class="taskname"><strong>Task: </strong>Have a Shower</p>
-      <p class="description"><strong>Description: </strong>Turn on water. Undress. Rub self with soap.</p>
-      <p class="assigned-to"><strong>Assigned To: </strong>Jim</p>
-      <p class="due-date"><strong>Due Date: </strong>10/30/2022</p>
-    
-      <div class="button-panel">
-        <button type="button" class="delete">Delete</button>
-        <button type="button" class="edit">Edit</button> 
-      </div>
-      
-    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
 
 
 
 
-
-        </div>
-      </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-
-
-
-    
 
   <script>
     $(".dropdown-menu a ").click(function () {
@@ -216,4 +232,5 @@
   </script>
 
 </body>
+
 </html>
