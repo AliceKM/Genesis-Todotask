@@ -71,7 +71,7 @@
   background-color: snow;
   text-align: left;
   line-height: 30px;
-  color: #d3db2f;
+  color: brown;
   margin-left: 20px;
 }
 
@@ -170,7 +170,7 @@ label {
 
 .form-label
 {color:blueviolet;
-  width: 140px;
+  width: 200px;
   text-align: left;
   margin-top: 5px;
 
@@ -200,27 +200,29 @@ margin-top: 10px;
   border-radius: 8px;
 }
 
-.SignUp
-{
+.SignUp-box{
+  margin-left:100px ;
   border: 1px solid #d9470e;
-  margin-left: 150px;
-  margin-right: 600px;
-  background-color: aliceblue;
-display:inline;
+  width:600px;
+  height: 550px;
+  background-color:lightblue;
+ display: block;
 }
 
 .wel
 {margin-bottom: 25px;
 margin-top: 50px;
 margin-left: 150px;
-color:brown;} 
+color:brown;
+
+} 
 
 /* signup page css end */
 
 /* login page  */
  .login-box{
   background-color: rgb(231, 219, 223);
-  width:500px;
+  width:450px;
   height: 450px;
   margin-top: 20px;
   margin-left: 50px;
@@ -239,9 +241,9 @@ color:brown;}
  .btn2{
   background-color: aqua;
   margin-left: 150px;
-  line-height: 35px;
-  width: 150px;
-  border-radius: 8px;
+    line-height: 35px;
+    width: 150px;
+    border-radius: 8px;
  }
 
  .col-form-label1{
@@ -249,25 +251,23 @@ color:brown;}
  }
 
 
-
-
-
 /*----submit addnewtask....*/
+
  .button_active {
-background-color:greenyellow;
-width:300px;
-line-height: 40px;
-font-weight: bolder;
-font-size: large;
-border-radius: 80px;
-border: 1px solid #73AD21;
-margin-bottom: 10px;
+   background-color:greenyellow;
+   width:300px;
+   line-height: 40px;
+   font-weight: bolder;
+   font-size: large;
+   border-radius: 80px;
+   border: 1px solid #73AD21;
+   margin-bottom: 10px;
  }
 
- .row{
+ /*.row{
   border: 3px solid #d3db2f;
 
- }
+ }*/
 
 .col-2{
   margin-top:10px;
@@ -277,4 +277,22 @@ margin-bottom: 10px;
 .btn{
   width:200px;
 }
+/* media quary for MobileS, Tablet and Laptap*/
+@media (min-width: 320px) and (max-width: 1024px){
+  .login-box,
+  .task-box2,
+  .SignUp-box{
+  background-color: lightgrey;
+  position: relative;
+  }
+}
 
+.show1 {
+ font-weight:bold;
+line-height: 40px;
+color:brown;
+background-color: rgb(236, 229, 229);
+display:list-item;
+text-align: center;
+border: #198754;
+}
