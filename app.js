@@ -1,7 +1,18 @@
-const tasknameEl = document.getElementById("fname")
-const assigninputEL = document.getElementById("assign-input")
-const descriptionEl = document.getElementById("description")
-const form = document.getElementById("taskinput")
+  //date and Time//
+  setInterval(show, 1000);
+  function show() {
+  let  date = new Date();
+      let current_date = date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate();
+      let current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
+      let date_time = 'Date: '+current_date+' '+current_time;	
+      document.getElementById("show").innerHTML = date_time;
+  };
+
+
+const tasknameEl = document.getElementById("firstname")
+    const assigninputEL = document.getElementById("assign-input")
+    const descriptionEl = document.getElementById("description")
+    const form = document.getElementById("taskinput");
 
 form.addEventListener('click' , function (e) {
     e.preventDefault()
@@ -15,14 +26,10 @@ form.addEventListener('click' , function (e) {
         isAssignValid&&
         isDescriptionValid;
 
-    if(isDescriptionValid) {
+    //if(isDescriptionValid) {
 
-    }
-
-
-
-
-})
+   // }
+});
 
 const isRequired = value => value ===  '' ? false : true;
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
@@ -117,7 +124,8 @@ const checkDueDate = () => {
         return false
     }  
        return true;  
-    }
+    };
    
-
+   
+  
    

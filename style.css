@@ -289,3 +289,16 @@ margin-bottom: 10px;
   width:200px;
 }
 
+
+.show1 {
+  font-weight:bold;
+ line-height: 40px;
+ color:brown;
+ background-color: rgb(236, 229, 229);
+ display:list-item;
+ text-align: center;
+ border: #198754;
+ }
+ 
+ 
+ 
