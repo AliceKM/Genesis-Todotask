@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TO-DO-LIST</title>
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
@@ -15,7 +16,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><strong>Genesis Group</strong></a>
@@ -43,24 +43,35 @@
 
 
 <div class="task-box2">
-  <form>
+  <form id="taskinput">
     <h2>Add Task</h2>
+    <div>
     <label for="name" >Task Name:</label>
-    <input type="text" id="fname" name="firstname" placeholder="Task name.."> <br><br>
+    <input type="text" id="fname" name="firstname" placeholder="Task name.."> <small></small>
+    </div>
+    <br><br>
+    <div>
     <label for="description" >Description:</label>
-    <textarea name="description" id="description"></textarea> <br><br>
+    <textarea name="description" id="description"></textarea> <small id="duecomm"></small><br><br>
     <label for="dueDate" >Due Date:</label>
-    <input type="date" name="dueDate" id="dueDate"> <br><br>
+    <input type="date" name="dueDate" id="dueDate"><small></small> 
+    </div>
+    <br><br>
     <!----Asignto-->
-    <label for="asignTo" >Asing To:</label>
+    <div>
+    <label for="asignTo" >Assign To:</label>
     <select name="asignTo">
         <option selected>Select name</option>
         <option value="laitha">Vanitha</option>
         <option value="vanitha">Jim</option>
         <option value="Dan">Dan</option>
-        <option value="Dan">Liz</option>
-        </select><br><br>
+        <input id="assign-input" type="text">
+        <small></small>
+        </select>
+        </div>
+        <br><br>
     <!----Status-->
+    <div>
      <label for="status" >Status:</label>
     <select name="status">
         <option>To Do</option>
@@ -68,11 +79,13 @@
         <option>Review</option>
         <option>Done</option>
     </select>
-     <br><br>
-     <input type="button" value="Submit">
+    </div>
+     
+     <input class="submitbbt" type="button" value="Submit" style="margin-left: 40%; margin-top: 50px;">
         
   </form>  
   </div>
+
   </body>
   </html>
     

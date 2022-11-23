@@ -72,19 +72,21 @@
 
 /*----- taskbax2----*/
 .task-box2 {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   display: grid;
   border: 2px solid rgb(160, 188, 36);
   border-radius: 5px;
-  margin: 10px 2px 10px 2px;
-  padding: 10px 10px 10px 10px;
+  /* margin: 10px 2px 10px 2px;
+  padding: 10px 10px 10px 10px; */
   background-color: snow;
   text-align: left;
-  line-height: 30px;
+  line-height: 25px;
   color: #d3db2f;
-  margin-left: 20px;
+  margin: auto;
+  margin-top: 5%;
 }
+
 
 
 .button-panel {
