@@ -53,7 +53,7 @@ class UI {
         <td>${task.status}</td>
         <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Delete</a></td>
         <td><a href="#" class ="btn btn-outline-info btn-sm edit">Edit</a></td>
-        `;
+        `; 
         list.appendChild(row)
     }
     static deleteTask(el) {
@@ -61,6 +61,7 @@ class UI {
             el.parentElement.parentElement.remove();
         }
     }
+    
     static editTask(el){
         const tasks = Store.getTasks();
         if(el.classList.contains("edit")){
