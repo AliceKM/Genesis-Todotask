@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TO-DO-LIST</title>
   <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+  <script src="validation.js" defer></script>
+  <script src="app.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
@@ -60,20 +61,20 @@
     <!----Asignto-->
     <div>
     <label for="asignTo" >Assign To:</label>
-    <select name="asignTo">
+        <select name="asignTo">
         <option selected>Select name</option>
         <option value="laitha">Vanitha</option>
         <option value="vanitha">Jim</option>
-        <option value="Dan">Dan</option>
+        <option value="Dan">Dan</option> -->
         <input id="assign-input" type="text">
         <small></small>
-        </select>
+        <!-- </select> -->
         </div>
         <br><br>
     <!----Status-->
     <div>
      <label for="status" >Status:</label>
-    <select name="status">
+    <select name="status" id="status-input">
         <option>To Do</option>
         <option>In Progress</option>
         <option>Review</option>
@@ -82,10 +83,8 @@
     </div>
      
      <input class="submitbbt" type="button" value="Submit" style="margin-left: 40%; margin-top: 50px;">
-        
-  </form>  
+        </form>  
   </div>
 
   </body>
-  </html>
-    
+</html>
