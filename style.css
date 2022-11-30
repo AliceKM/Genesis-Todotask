@@ -4,17 +4,20 @@
 }
 
 #navbarNav {
-  margin-left: 70%;
+  margin-left: 75%;
+  background-color: pink;
+  border-radius: 5px;
 }
 
 .title-pic {
   background: linear-gradient(to left top,#f8fafa,#bee8d8);
   border-radius: 55px;
   height: 250px;
-  width: ;
+  width:  ;
+
 }
 
-.title-pic h1 {
+.title-pic h2 {
   text-align: center;
   padding-top: 90px;
   text-shadow: 3px 3px 0   #ff9d00, 6px 6px 0  rgb(244, 244, 71),
@@ -107,10 +110,44 @@
   min-height: 100vh;
   background: linear-gradient(to right top,#f8fafa,#bee8d8);
   border-radius: 55px;
+ }
+ /*.modal-footer{
+  background-color: palegreen;
+ }*/
+.modal-body {
+  box-sizing: border-box;
+  background-color:antiquewhite;
+}
+
+ .modal-header{
+  text-align: center;
+  font-weight: bolder;
+  background-color: #afded1;
+ }
+ .form {
+  box-shadow: 0 5px 5px 0px ;
+  border-radius: 8px;
+   background-color:lightpink;
+  height:400px;
   
+ }
+ .mb-5 {
+   color: #198754;
+  
+ }
   
  
-}
+ .modal-title {
+    font-weight: bold;
+  width : 100px;
+  
+ }
+
+  
+ 
+ 
+
+
 
 .card-container {
   display: flex;
@@ -210,6 +247,7 @@ input.form-control {
   border-color: #198754;
   margin-left: 30px;
   height: 44.5px;
+ 
 }
 .dropdown,
 .dropdown-center,
@@ -225,12 +263,16 @@ textarea.form-control {
   width: 700px;
   margin-left: 10%;
   border: #198754 solid 2px;
+  background-color: #d9470e;
 }
 label {
   text-align: center;
   margin-left: 10%;
   color: #198754;
   font-size: 18px;
+  font-weight: bold;
+ 
+  
 }
 .container-text-center {
   border: 2px #198754 solid;
@@ -308,11 +350,12 @@ margin-top: 10px;
 display:inline;
 }
 
-.wel
-{margin-bottom: 25px;
+.wel{
+margin-bottom: 25px;
 margin-top: 50px;
 margin-left: 150px;
-color:brown;} 
+color:brown;
+} 
 
 /* signup page css end */
 
@@ -396,7 +439,7 @@ margin-bottom: 10px;
 
  .table-responsive{
   border: #afded1 ridge 5px;
-  border-radius: 35px;
+  border-radius: 25px;
   overflow: hidden;
   margin: 20px 20px;
 
@@ -406,6 +449,18 @@ margin-bottom: 10px;
   color: rgb(126, 168, 170);
   font-size:larger;
   overflow: hidden;
+  width: 100%;
+}
+/*.com {
+  
+  
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  width:200px;
+  
+  
+  background-color: #198754;
 
 }
-
+*/

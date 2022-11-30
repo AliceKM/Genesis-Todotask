@@ -15,6 +15,8 @@ class Task {
         this.assignedto = assignedto;
         this.duedate = duedate;
         this.status = status;
+       
+        
     }
 }
 
@@ -51,11 +53,15 @@ class UI {
         <td>${task.assignedto}</td>
         <td>${task.duedate}</td>
         <td>${task.status}</td>
+        <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Update</a></td>   
         <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Delete</a></td>
         <td><a href="#" class ="btn btn-outline-info btn-sm edit">Edit</a></td>
-        `; 
+        `;      
+         
         list.appendChild(row)
     }
+    
+    
     static deleteTask(el) {
         if(el.classList.contains("delete")) {
             el.parentElement.parentElement.remove();
@@ -65,10 +71,11 @@ class UI {
     static editTask(el){
         const tasks = Store.getTasks();
         if(el.classList.contains("edit")){
-            console.log(tasks);
+           console.log(tasks);
         }
+       
         
-    }
+   }
     static showAlert(message,className){
         const div = document.createElement("div");
         div.className =`alert alert-${className}`;
@@ -148,3 +155,9 @@ document.getElementById('task-input').addEventListener('submit',(e)=>{
     UI.editTask(e.target)
     });
 
+
+	
+    
+    
+  
+   
