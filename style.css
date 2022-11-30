@@ -111,9 +111,8 @@
   background: linear-gradient(to right top,#f8fafa,#bee8d8);
   border-radius: 55px;
  }
- /*.modal-footer{
-  background-color: palegreen;
- }*/
+ /* Add task form */
+ 
 .modal-body {
   box-sizing: border-box;
   background-color:antiquewhite;
@@ -135,20 +134,13 @@
    color: #198754;
   
  }
-  
- 
  .modal-title {
     font-weight: bold;
   width : 100px;
   
- }
-
-  
+ } 
  
  
-
-
-
 .card-container {
   display: flex;
   flex-direction: row;
@@ -451,16 +443,5 @@ margin-bottom: 10px;
   overflow: hidden;
   width: 100%;
 }
-/*.com {
-  
-  
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  width:200px;
-  
-  
-  background-color: #198754;
 
-}
-*/
+

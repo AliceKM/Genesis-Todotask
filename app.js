@@ -53,15 +53,12 @@ class UI {
         <td>${task.assignedto}</td>
         <td>${task.duedate}</td>
         <td>${task.status}</td>
-        <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Update</a></td>   
         <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Delete</a></td>
         <td><a href="#" class ="btn btn-outline-info btn-sm edit">Edit</a></td>
         `;      
          
         list.appendChild(row)
-    }
-    
-    
+    }   
     static deleteTask(el) {
         if(el.classList.contains("delete")) {
             el.parentElement.parentElement.remove();
