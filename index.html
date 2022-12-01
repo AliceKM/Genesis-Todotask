@@ -29,13 +29,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#"><b>Home</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign up </a>
+            <a class="nav-link" href="signup.html"><b>Sign up </b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Log In </a>
+            <a class="nav-link" href="login.html"><b>Log In </b></a>
           </li>
 
         </ul>
@@ -51,7 +51,7 @@
   <!--Title-->
   <div class="container g-0">
   <div class="title-pic">
-    <h1>TASK MANAGER</h1>
+    <h2>TASK MANAGER</h2>
   </div>
   <!--input section-->
   <!-- <div id="task-form" class="row g-1 position-relative mx-auto " >
@@ -98,7 +98,7 @@
         id="floatingTextarea"></textarea>
       <label for="floatingTextarea ">Description</label> -->
       <!-- < class="btn11">
-        <!-- <input type="submit" class="button_active" value="Submit Task"> -->
+        <!- <input type="submit" class="button_active" value="Submit Task"> -->
         <!-- <a href="addtask.html"><input type="submit" class="button_active" value="Add New Task"></a>
       </div> --> 
     <!-- </div>
@@ -117,6 +117,7 @@
         </div>
 
         <div class="modal-body" id="container" >
+  
           
           <form id="task-input" class="form">
             <div class="mb-5">
@@ -136,7 +137,7 @@
         <input id="assign-input" type="text">
         <small></small>
             </div >
-            <div>
+            <div class="mb-5">
               <label for="status" >Status:</label>
              <select name="status" id="status-input">
                  <option >To Do</option>
@@ -144,11 +145,12 @@
                  <option>Review</option>
                  <option>Done</option>
              </select>
+             
              </div>
             </div>      
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button  id="submit" type="submit" class="btn btn-primary">Add New Task</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: green"  >Close</button>
+          <button  id="submit" type="submit" class="btn btn-primary" style="background-color: green" >Add New Task</button>
         </div>
           </form>
       </div>
@@ -169,13 +171,22 @@
           <th></th>
           <th></th>
           <th></th>
+
+
         </tr>
+        
+        
       </thead>
       <tbody id="task-list"></tbody>
     </table>
+      
   </div>
-    
-  </div>
+  <!--<div class = "com">
+  <button id = "com" class="com"><b>UPDATE</b></button> 
+  <button id="com" class="com"><b>COMPLEATE TASK</b></label>
+ 
+  
+  </div> --->
 
 
  

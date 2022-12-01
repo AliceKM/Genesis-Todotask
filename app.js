@@ -15,6 +15,8 @@ class Task {
         this.assignedto = assignedto;
         this.duedate = duedate;
         this.status = status;
+       
+        
     }
 }
 
@@ -52,16 +54,20 @@ class UI {
         <td>${task.duedate}</td>
         <td>${task.status}</td>
         <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Delete</a></td>
+
+
         <td><a href="#" class ="btn btn-outline-info btn-sm edit id="edit" data-id=${task.name}">Edit</a></td>
         <td><input class="form-check-input checkbox" type="checkbox  " onclick = "isChecked()" ></td>
         `; 
+
         list.appendChild(row)
-    }
+    }   
     static deleteTask(el) {
         if(el.classList.contains("delete")) {
             el.parentElement.parentElement.remove();
         }
     }
+
     // static CheckTask = (e)=>{
     //     const task = e.parentElement;
         
@@ -173,9 +179,12 @@ document.getElementById('task-input').addEventListener('submit',(e)=>{
         }
     }
     });
+
+
    
     // function isChecked(){
     //     if(document.getElementById("myCheckBox").checked){
     //         console.log("checked");
     //     }
     // }
+
