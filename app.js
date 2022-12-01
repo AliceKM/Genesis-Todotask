@@ -54,9 +54,12 @@ class UI {
         <td>${task.duedate}</td>
         <td>${task.status}</td>
         <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Delete</a></td>
-        <td><a href="#" class ="btn btn-outline-info btn-sm edit">Edit</a></td>
-        `;      
-         
+
+
+        <td><a href="#" class ="btn btn-outline-info btn-sm edit id="edit" data-id=${task.name}">Edit</a></td>
+        <td><input class="form-check-input checkbox" type="checkbox  " onclick = "isChecked()" ></td>
+        `; 
+
         list.appendChild(row)
     }   
     static deleteTask(el) {
@@ -64,15 +67,23 @@ class UI {
             el.parentElement.parentElement.remove();
         }
     }
-    
-    static editTask(el){
-        const tasks = Store.getTasks();
-        if(el.classList.contains("edit")){
-           console.log(tasks);
-        }
-       
+
+    // static CheckTask = (e)=>{
+    //     const task = e.parentElement;
         
-   }
+    //     if(e.target.checked === true){
+    //         task.style.textDecoration = 'line-through';
+    //         task.style.color = "#ff0000"
+            
+    //     }else {
+    //         task.style.textDecoration = "none";
+    //         task.style.color = "#2f4f4f";
+    //       }
+    //     }
+        
+       
+    // }
+    
     static showAlert(message,className){
         const div = document.createElement("div");
         div.className =`alert alert-${className}`;
@@ -92,6 +103,7 @@ class UI {
         document.getElementById("status-input").value = '';
         
     }
+   
 }
 // Store Class : handle Storage
 class Store {
@@ -110,6 +122,7 @@ class Store {
         localStorage.setItem('tasks',JSON.stringify(tasks));
 
     }
+    
     static removeTask(status){
         const tasks = Store.getTasks();
         tasks.forEach((task,index)=>{
@@ -119,6 +132,7 @@ class Store {
         })
     localStorage.setItem('tasks', JSON.stringify(tasks));
     }
+
 }
 // Event: Display Task
 document.addEventListener('DOMContentLoaded', UI.displayTask);
@@ -143,18 +157,34 @@ document.getElementById('task-input').addEventListener('submit',(e)=>{
     Store.addTask(task)
     UI.showAlert('Task Added','success');
     UI.clearFields();
+    
     }
  })
 // Event: Remove a Task
     document.getElementById("task-list").addEventListener("click",(e) =>{
-    UI.deleteTask(e.target)
-    Store.removeTask(e.target.parentElement.previousElementSibling.textContent)
-    UI.editTask(e.target)
+    UI.deleteTask(e.target);
+    Store.removeTask(e.target.parentElement.previousElementSibling.textContent);
+    if(e.target.id ==="edit"){
+        //Map each task from taskList array
+               for (let data of Store.getTasks()){
+                //toggle task by id
+                if(data.name===(e.target.dataset.id)){  
+                //update task status to DONE
+                data.status='DONE' 
+                console.log(data)
+         Store.addTask(data)
+            }      
+            UI.addTaskToList(data);
+            UI.clearFields();
+        }
+    }
     });
 
 
-	
-    
-    
-  
    
+    // function isChecked(){
+    //     if(document.getElementById("myCheckBox").checked){
+    //         console.log("checked");
+    //     }
+    // }
+
