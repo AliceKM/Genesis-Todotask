@@ -52,8 +52,8 @@ class UI {
         <td>${task.duedate}</td>
         <td>${task.status}</td>
         <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Delete</a></td>
-        <td><a href="#" class ="btn btn-outline-info btn-sm edit">Edit</a></td>
-        <td><input class="form-check-input checkbox" type="checkbox" value="" ></td>
+        <td><a href="#" class ="btn btn-outline-info btn-sm edit id="edit" data-id=${task.name}">Edit</a></td>
+        <td><input class="form-check-input checkbox" type="checkbox  " onclick = "isChecked()" ></td>
         `; 
         list.appendChild(row)
     }
@@ -62,18 +62,18 @@ class UI {
             el.parentElement.parentElement.remove();
         }
     }
-    static CheckTask = (e)=>{
-        const task = e.parentElement;
+    // static CheckTask = (e)=>{
+    //     const task = e.parentElement;
         
-        if(e.target.checked){
-            task.style.textDecoration = 'line-through';
-            task.style.color = "#ff0000"
+    //     if(e.target.checked === true){
+    //         task.style.textDecoration = 'line-through';
+    //         task.style.color = "#ff0000"
             
-        }else {
-            task.style.textDecoration = "none";
-            task.style.color = "#2f4f4f";
-          }
-        }
+    //     }else {
+    //         task.style.textDecoration = "none";
+    //         task.style.color = "#2f4f4f";
+    //       }
+    //     }
         
        
     // }
@@ -126,6 +126,7 @@ class Store {
         })
     localStorage.setItem('tasks', JSON.stringify(tasks));
     }
+
 }
 // Event: Display Task
 document.addEventListener('DOMContentLoaded', UI.displayTask);
@@ -157,6 +158,24 @@ document.getElementById('task-input').addEventListener('submit',(e)=>{
     document.getElementById("task-list").addEventListener("click",(e) =>{
     UI.deleteTask(e.target);
     Store.removeTask(e.target.parentElement.previousElementSibling.textContent);
-    UI.checkTask(e.target)
+    if(e.target.id ==="edit"){
+        //Map each task from taskList array
+               for (let data of Store.getTasks()){
+                //toggle task by id
+                if(data.name===(e.target.dataset.id)){  
+                //update task status to DONE
+                data.status='DONE' 
+                console.log(data)
+         Store.addTask(data)
+            }      
+            UI.addTaskToList(data);
+            UI.clearFields();
+        }
+    }
     });
    
+    // function isChecked(){
+    //     if(document.getElementById("myCheckBox").checked){
+    //         console.log("checked");
+    //     }
+    // }
