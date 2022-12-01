@@ -8,10 +8,10 @@
 }
 
 .title-pic {
-  background: linear-gradient(to left top,#f8fafa,#bee8d8);
+  background: linear-gradient(to left top,rgb(246, 248, 172),#f0aee0);
   border-radius: 55px;
   height: 250px;
-  width: ;
+
 }
 
 .title-pic h1 {
@@ -105,7 +105,7 @@
 }
 .container {
   min-height: 100vh;
-  background: linear-gradient(to right top,#f8fafa,#bee8d8);
+  background: linear-gradient(to bottom ,#f28670,#eeeb94);
   border-radius: 55px;
   
   
@@ -395,7 +395,7 @@ margin-bottom: 10px;
  }
 
  .table-responsive{
-  border: #afded1 ridge 5px;
+  border: #f8d8f3 inset 5px;
   border-radius: 35px;
   overflow: hidden;
   margin: 20px 20px;
@@ -403,9 +403,15 @@ margin-bottom: 10px;
  }
  
  thead {
-  color: rgb(126, 168, 170);
+  color: rgb(207, 190, 135);
   font-size:larger;
   overflow: hidden;
 
 }
+.form-check-input{
+  size: 100px;
+}
 
+.form-check-input[type=checkbox] {
+ 
+}

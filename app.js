@@ -53,6 +53,7 @@ class UI {
         <td>${task.status}</td>
         <td><a href="#" class ="btn btn-outline-danger btn-sm delete">Delete</a></td>
         <td><a href="#" class ="btn btn-outline-info btn-sm edit">Edit</a></td>
+        <td><input class="form-check-input checkbox" type="checkbox" value="" ></td>
         `; 
         list.appendChild(row)
     }
@@ -61,14 +62,22 @@ class UI {
             el.parentElement.parentElement.remove();
         }
     }
-    
-    static editTask(el){
-        const tasks = Store.getTasks();
-        if(el.classList.contains("edit")){
-            console.log(tasks);
+    static CheckTask = (e)=>{
+        const task = e.parentElement;
+        
+        if(e.target.checked){
+            task.style.textDecoration = 'line-through';
+            task.style.color = "#ff0000"
+            
+        }else {
+            task.style.textDecoration = "none";
+            task.style.color = "#2f4f4f";
+          }
         }
         
-    }
+       
+    // }
+    
     static showAlert(message,className){
         const div = document.createElement("div");
         div.className =`alert alert-${className}`;
@@ -88,6 +97,7 @@ class UI {
         document.getElementById("status-input").value = '';
         
     }
+   
 }
 // Store Class : handle Storage
 class Store {
@@ -106,6 +116,7 @@ class Store {
         localStorage.setItem('tasks',JSON.stringify(tasks));
 
     }
+    
     static removeTask(status){
         const tasks = Store.getTasks();
         tasks.forEach((task,index)=>{
@@ -139,12 +150,13 @@ document.getElementById('task-input').addEventListener('submit',(e)=>{
     Store.addTask(task)
     UI.showAlert('Task Added','success');
     UI.clearFields();
+    
     }
  })
 // Event: Remove a Task
     document.getElementById("task-list").addEventListener("click",(e) =>{
-    UI.deleteTask(e.target)
-    Store.removeTask(e.target.parentElement.previousElementSibling.textContent)
-    UI.editTask(e.target)
+    UI.deleteTask(e.target);
+    Store.removeTask(e.target.parentElement.previousElementSibling.textContent);
+    UI.checkTask(e.target)
     });
-
+   
